@@ -103,7 +103,7 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1009,890" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1293,890" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="rechargeChoice" />
       <Variable x:TypeArguments="x:String" Name="UserChoice" />
@@ -114,18 +114,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="1310,592.04" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="1310,778.04" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_bookedTickets" />
         <Variable x:TypeArguments="x:String" Name="creditSelected" />
         <Variable x:TypeArguments="x:Boolean" Name="ProcessFlag" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_metroDetails" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_filtered" />
-        <Variable x:TypeArguments="x:Int32" Name="CurrentCreditedAmount">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:Int32" />
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="x:Int32" Default="0" Name="CurrentCreditedAmount" />
         <Variable x:TypeArguments="x:Int32" Name="fare" />
         <Variable x:TypeArguments="scg:List(x:String)" Name="FromStationList" />
         <Variable x:TypeArguments="scg:List(x:String)" Name="ToStationList" />
@@ -142,9 +138,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart.StartNode>
-        <x:Reference>__ReferenceID15</x:Reference>
+        <x:Reference>__ReferenceID14</x:Reference>
       </Flowchart.StartNode>
-      <FlowStep x:Name="__ReferenceID15" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+      <FlowStep x:Name="__ReferenceID14" sap2010:WorkflowViewState.IdRef="FlowStep_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">535,105</av:Point>
@@ -229,7 +225,7 @@
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">535,205</av:Point>
                 <av:Size x:Key="ShapeSize">110,70</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">590,275 590,305 670,305 670,5 460,5 460,275</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">590,275 590,305</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:BuildDataTable DataTable="[dt_bookedTickets]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;From_x0020_Station&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;To_x0020_Station&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Fare&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
@@ -241,17 +237,17 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:BuildDataTable>
             <FlowStep.Next>
-              <FlowStep x:Name="__ReferenceID14" sap2010:WorkflowViewState.IdRef="FlowStep_16">
+              <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_16">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <av:Point x:Key="ShapeLocation">405,275</av:Point>
+                    <av:Point x:Key="ShapeLocation">535,305</av:Point>
                     <av:Size x:Key="ShapeSize">110,70</av:Size>
-                    <av:PointCollection x:Key="ConnectorLocation">460,345 460,465 670,465 670,345 580,345 580,375</av:PointCollection>
+                    <av:PointCollection x:Key="ConnectorLocation">590,375 590,420</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="518,852" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_8">
+                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="under do while checking if input is entered or not&#xA;" Condition="[isNothing(creditSelected) OrElse String.IsNullOrEmpty(creditSelected.Trim)]" DisplayName="credit input dialogue " sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_8">
                   <ui:InterruptibleDoWhile.Body>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,738" sap2010:WorkflowViewState.IdRef="Sequence_128">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,769" sap2010:WorkflowViewState.IdRef="Sequence_128">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -268,7 +264,14 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:InputDialog>
-                      <If Condition="[creditSelected=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="450,354" sap2010:WorkflowViewState.IdRef="If_21">
+                      <If sap2010:Annotation.AnnotationText="if nothing is selected then throws message " Condition="[creditSelected=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="450,385" sap2010:WorkflowViewState.IdRef="If_21">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
                           <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_129">
                             <sap:WorkflowViewStateService.ViewState>
@@ -292,164 +295,308 @@
                       </If>
                     </Sequence>
                   </ui:InterruptibleDoWhile.Body>
-                  <ui:InterruptibleDoWhile.Condition>
-                    <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="isNothing(creditSelected) OrElse String.IsNullOrEmpty(creditSelected.Trim)" />
-                  </ui:InterruptibleDoWhile.Condition>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </ui:InterruptibleDoWhile>
                 <FlowStep.Next>
-                  <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_3">
+                  <FlowDecision x:Name="__ReferenceID11" Condition="[processFlag=False]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:Point x:Key="ShapeLocation">525,375</av:Point>
-                        <av:Size x:Key="ShapeSize">110,70</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">580,445 580,480</av:PointCollection>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">560,420</av:Point>
+                        <av:Size x:Key="ShapeSize">60,60</av:Size>
+                        <av:PointCollection x:Key="TrueConnector">590,480 590,595</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InputDialog Options="{x:Null}" DisplayName="Input Amount Dialog" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InputDialog_27" IsPassword="False" Label="Select Credit Amount :" OptionsString="50;100;200;500" Title="INITIAL CARD DETAILS">
-                      <ui:InputDialog.Result>
-                        <OutArgument x:TypeArguments="x:String">[creditSelected]</OutArgument>
-                      </ui:InputDialog.Result>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:InputDialog>
-                    <FlowStep.Next>
-                      <FlowDecision x:Name="__ReferenceID13" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
-                        <FlowDecision.Condition>
-                          <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="processFlag=False" />
-                        </FlowDecision.Condition>
+                    <FlowDecision.True>
+                      <FlowStep x:Name="__ReferenceID9" sap2010:WorkflowViewState.IdRef="FlowStep_11">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <av:Point x:Key="ShapeLocation">550,480</av:Point>
-                            <av:Size x:Key="ShapeSize">60,60</av:Size>
-                            <av:PointCollection x:Key="TrueConnector">580,540 580,625</av:PointCollection>
+                            <av:Point x:Key="ShapeLocation">535,595</av:Point>
+                            <av:Size x:Key="ShapeSize">110,70</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">590,665 590,720</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <FlowDecision.True>
-                          <FlowStep x:Name="__ReferenceID11" sap2010:WorkflowViewState.IdRef="FlowStep_11">
+                        <Sequence sap2010:Annotation.AnnotationText="sequence  contains initializing credit amount ,station list, try catch for station and filter data table for Fare of metro stations" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_124">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1965" sap2010:WorkflowViewState.IdRef="Sequence_115">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="scg:List(x:String)" Name="toStationListFiltered" />
+                            </Sequence.Variables>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <av:Point x:Key="ShapeLocation">525,625</av:Point>
-                                <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                <av:PointCollection x:Key="ConnectorLocation">580,695 580,770</av:PointCollection>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence sap2010:Annotation.AnnotationText="sequence  contains initializing credit amount ,station list, try catch for station and filter data table for Fare of metro stations" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_124">
+                            <Assign DisplayName="Assign amount" sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_41">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[CurrentCreditedAmount]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">[CurrentCreditedAmount+(CInt(creditSelected))]</InArgument>
+                              </Assign.Value>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="472,2102" sap2010:WorkflowViewState.IdRef="Sequence_115">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="scg:List(x:String)" Name="toStationListFiltered" />
-                                </Sequence.Variables>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <Assign DisplayName="Assign amount" sap:VirtualizedContainerService.HintSize="438,114" sap2010:WorkflowViewState.IdRef="Assign_41">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Int32">[CurrentCreditedAmount]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Int32">[CurrentCreditedAmount+(CInt(creditSelected))]</InArgument>
-                                  </Assign.Value>
+                            </Assign>
+                            <Assign sap2010:Annotation.AnnotationText="DataTable -&gt; Enumerable Collection -&gt; Select Source Station Column -&gt; Convert to String -&gt; Remove Duplicates -&gt; Convert to List" DisplayName="extract unique distinct From stations" sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_42">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="scg:List(x:String)">[FromStationList]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="scg:List(x:String)">[dt_metroDetails.AsEnumerable().Select(Function(row) row("Source Station").ToString()).Distinct().ToList()]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <Assign DisplayName="extract unique to stations from stations" sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_43">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="scg:List(x:String)">[ToStationList]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="scg:List(x:String)">[dt_metroDetails.AsEnumerable().Select(Function(row) row("Target Station").ToString()).Distinct().ToList()]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[isNothing(fromStation) OrElse String.IsNullOrEmpty(fromStation.Trim)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="518,884" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_9">
+                              <ui:InterruptibleDoWhile.Body>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,738" sap2010:WorkflowViewState.IdRef="Sequence_132">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </Assign>
-                                <Assign sap2010:Annotation.AnnotationText="DataTable -&gt; Enumerable Collection -&gt; Select Source Station Column -&gt; Convert to String -&gt; Remove Duplicates -&gt; Convert to List" DisplayName="extract unique distinct From stations" sap:VirtualizedContainerService.HintSize="438,114" sap2010:WorkflowViewState.IdRef="Assign_42">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="scg:List(x:String)">[FromStationList]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="scg:List(x:String)">[dt_metroDetails.AsEnumerable().Select(Function(row) row("Source Station").ToString()).Distinct().ToList()]</InArgument>
-                                  </Assign.Value>
+                                  <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog for choosing from station" sap:VirtualizedContainerService.HintSize="450,324" sap2010:WorkflowViewState.IdRef="InputDialog_50" IsPassword="False" Label="Select your current station : " Options="[FromStationList.ToArray]" Title="STATIONS">
+                                    <ui:InputDialog.Result>
+                                      <OutArgument x:TypeArguments="x:String">[fromStation]</OutArgument>
+                                    </ui:InputDialog.Result>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:InputDialog>
+                                  <If Condition="[fromStation=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="450,354" sap2010:WorkflowViewState.IdRef="If_22">
+                                    <If.Then>
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_134">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_37" Text="[&quot;Please select your station again&quot;]" />
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_133">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </ui:InterruptibleDoWhile.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InterruptibleDoWhile>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="CommentOut_20">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="472,428" sap2010:WorkflowViewState.IdRef="Sequence_138">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </Assign>
-                                <Assign DisplayName="extract unique to stations from stations" sap:VirtualizedContainerService.HintSize="438,114" sap2010:WorkflowViewState.IdRef="Assign_43">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="scg:List(x:String)">[ToStationList]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="scg:List(x:String)">[dt_metroDetails.AsEnumerable().Select(Function(row) row("Target Station").ToString()).Distinct().ToList()]</InArgument>
-                                  </Assign.Value>
+                                  <TryCatch sap2010:Annotation.AnnotationText="ask user for station and if invalid value is selected then throws en error till the process is completed&#xA;" DisplayName="Try Catch for stations" sap:VirtualizedContainerService.HintSize="438,368" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <TryCatch.Catches>
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_16">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ActivityAction x:TypeArguments="s:Exception">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                          </ActivityAction.Argument>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_117">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_33" Text="[&quot;Please select any station&quot;]" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </Catch>
+                                    </TryCatch.Catches>
+                                  </TryCatch>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <Assign DisplayName="Assign remaining stations" sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_44">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="scg:List(x:String)">[toStationListFiltered]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="scg:List(x:String)">[ToStationList.Where(Function(Station) Station &lt;&gt; FromStation).ToList()]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[isNothing(toStation) OrElse String.IsNullOrEmpty(toStation.Trim)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_10">
+                              <ui:InterruptibleDoWhile.Body>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,738" sap2010:WorkflowViewState.IdRef="Sequence_135">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </Assign>
-                                <TryCatch sap2010:Annotation.AnnotationText="ask user for station and if invalid value is selected then throws en error till the process is completed&#xA;" DisplayName="Try Catch for stations" sap:VirtualizedContainerService.HintSize="438,609" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                                  <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog for choosing to stations" sap:VirtualizedContainerService.HintSize="450,324" sap2010:WorkflowViewState.IdRef="InputDialog_51" IsPassword="False" Label="select your destination station : " Options="[toStationListFiltered.ToArray]" Title="STATIONS">
+                                    <ui:InputDialog.Result>
+                                      <OutArgument x:TypeArguments="x:String">[toStation]</OutArgument>
+                                    </ui:InputDialog.Result>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:InputDialog>
+                                  <If Condition="[toStation=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="450,354" sap2010:WorkflowViewState.IdRef="If_23">
+                                    <If.Then>
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_136">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_38" Text="[&quot;Please select your station again&quot;]" />
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_137">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </ui:InterruptibleDoWhile.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InterruptibleDoWhile>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="CommentOut_19">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="472,634" sap2010:WorkflowViewState.IdRef="Sequence_139">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <TryCatch.Try>
-                                    <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog for choosing from station" sap:VirtualizedContainerService.HintSize="334,292" sap2010:WorkflowViewState.IdRef="InputDialog_45" IsPassword="False" Label="Select your current station : " Options="[FromStationList.ToArray]" Title="STATIONS">
-                                      <ui:InputDialog.Result>
-                                        <OutArgument x:TypeArguments="x:String">[fromStation]</OutArgument>
-                                      </ui:InputDialog.Result>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:InputDialog>
-                                  </TryCatch.Try>
-                                  <TryCatch.Catches>
-                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_16">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ActivityAction x:TypeArguments="s:Exception">
-                                        <ActivityAction.Argument>
-                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                        </ActivityAction.Argument>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="492,750" sap2010:WorkflowViewState.IdRef="Sequence_117">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="458,117" sap2010:WorkflowViewState.IdRef="MessageBox_33" Text="[&quot;Please select any station&quot;]" />
-                                          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="458,573" sap2010:WorkflowViewState.IdRef="RetryScope_17">
-                                            <ui:RetryScope.ActivityBody>
-                                              <ActivityAction>
-                                                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,375" sap2010:WorkflowViewState.IdRef="Sequence_116">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog for choosing from station" sap:VirtualizedContainerService.HintSize="382,315" sap2010:WorkflowViewState.IdRef="InputDialog_47" IsPassword="False" Label="Select your current station : " Options="[FromStationList.ToArray]" Title="STATIONS">
+                                  <TryCatch sap2010:Annotation.AnnotationText="select destination station and if not selected then throw an exception" DisplayName="Try Catch for stations" sap:VirtualizedContainerService.HintSize="438,574" sap2010:WorkflowViewState.IdRef="TryCatch_14">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <TryCatch.Try>
+                                      <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog for choosing to stations" sap:VirtualizedContainerService.HintSize="334,292" sap2010:WorkflowViewState.IdRef="InputDialog_46" IsPassword="False" Label="select your destination station : " Options="[toStationListFiltered.ToArray]" Title="STATIONS">
+                                        <ui:InputDialog.Result>
+                                          <OutArgument x:TypeArguments="x:String">[toStation]</OutArgument>
+                                        </ui:InputDialog.Result>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:InputDialog>
+                                    </TryCatch.Try>
+                                    <TryCatch.Catches>
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_17">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ActivityAction x:TypeArguments="s:Exception">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                          </ActivityAction.Argument>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="416,667" sap2010:WorkflowViewState.IdRef="Sequence_118">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_34" Text="[&quot;Please select any station&quot;]" />
+                                            <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="382,490" sap2010:WorkflowViewState.IdRef="RetryScope_18">
+                                              <ui:RetryScope.ActivityBody>
+                                                <ActivityAction>
+                                                  <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog for choosing to stations" sap:VirtualizedContainerService.HintSize="334,292" sap2010:WorkflowViewState.IdRef="InputDialog_48" IsPassword="False" Label="select your destination station : " Options="[toStationListFiltered.ToArray]" Title="STATIONS">
                                                     <ui:InputDialog.Result>
-                                                      <OutArgument x:TypeArguments="x:String">[fromStation]</OutArgument>
+                                                      <OutArgument x:TypeArguments="x:String">[toStation]</OutArgument>
                                                     </ui:InputDialog.Result>
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -458,477 +605,471 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:InputDialog>
-                                                </Sequence>
-                                              </ActivityAction>
-                                            </ui:RetryScope.ActivityBody>
-                                            <ui:RetryScope.Condition>
-                                              <ActivityFunc x:TypeArguments="x:Boolean" />
-                                            </ui:RetryScope.Condition>
-                                          </ui:RetryScope>
-                                        </Sequence>
-                                      </ActivityAction>
-                                    </Catch>
-                                  </TryCatch.Catches>
-                                </TryCatch>
-                                <Assign DisplayName="Assign remaining stations" sap:VirtualizedContainerService.HintSize="438,114" sap2010:WorkflowViewState.IdRef="Assign_44">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="scg:List(x:String)">[toStationListFiltered]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="scg:List(x:String)">[ToStationList.Where(Function(Station) Station &lt;&gt; FromStation).ToList()]</InArgument>
-                                  </Assign.Value>
+                                                </ActivityAction>
+                                              </ui:RetryScope.ActivityBody>
+                                              <ui:RetryScope.Condition>
+                                                <ActivityFunc x:TypeArguments="x:Boolean" />
+                                              </ui:RetryScope.Condition>
+                                            </ui:RetryScope>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </Catch>
+                                    </TryCatch.Catches>
+                                  </TryCatch>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:FilterDataTable sap2010:Annotation.AnnotationText="filtering out the datatable for  &#xA;fair" DataTable="[dt_metroDetails]" DisplayName="Filter Data Table " FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="518,235" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dt_filtered]" SelectColumnsMode="Remove">
+                              <ui:FilterDataTable.Filters>
+                                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                  <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                                    <ui:FilterOperationArgument.Column>
+                                      <InArgument x:TypeArguments="x:String">["Source Station"]</InArgument>
+                                    </ui:FilterOperationArgument.Column>
+                                    <ui:FilterOperationArgument.Operand>
+                                      <InArgument x:TypeArguments="x:String">[fromStation]</InArgument>
+                                    </ui:FilterOperationArgument.Operand>
+                                  </ui:FilterOperationArgument>
+                                  <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                                    <ui:FilterOperationArgument.Column>
+                                      <InArgument x:TypeArguments="x:String">["Target Station"]</InArgument>
+                                    </ui:FilterOperationArgument.Column>
+                                    <ui:FilterOperationArgument.Operand>
+                                      <InArgument x:TypeArguments="x:String">[toStation]</InArgument>
+                                    </ui:FilterOperationArgument.Operand>
+                                  </ui:FilterOperationArgument>
+                                </scg:List>
+                              </ui:FilterDataTable.Filters>
+                              <ui:FilterDataTable.SelectColumns>
+                                <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                  <x:Null />
+                                </scg:List>
+                              </ui:FilterDataTable.SelectColumns>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:FilterDataTable>
+                            <Assign sap2010:Annotation.AnnotationText="Filtering fare form filtered datatable " sap:VirtualizedContainerService.HintSize="518,136" sap2010:WorkflowViewState.IdRef="Assign_45">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[fare]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(dt_filtered.Rows(0)("Fare").ToString)]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                          </Sequence>
+                        </Sequence>
+                        <FlowStep.Next>
+                          <FlowDecision x:Name="__ReferenceID3" Condition="[CurrentCreditedAmount&gt;=fare]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <av:Point x:Key="ShapeLocation">560,720</av:Point>
+                                <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                <av:PointCollection x:Key="TrueConnector">560,750 455,750</av:PointCollection>
+                                <av:PointCollection x:Key="FalseConnector">620,750 705,750</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <FlowDecision.True>
+                              <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_5">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">345,715</av:Point>
+                                    <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">400,785 400,865</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence sap2010:Annotation.AnnotationText="sequene will run when the condtion get passes then shows the user success message" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_89">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </Assign>
-                                <TryCatch sap2010:Annotation.AnnotationText="select destination station and if not selected then throw an exception" DisplayName="Try Catch for stations" sap:VirtualizedContainerService.HintSize="438,583" sap2010:WorkflowViewState.IdRef="TryCatch_14">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <TryCatch.Try>
-                                    <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog for choosing to stations" sap:VirtualizedContainerService.HintSize="334,292" sap2010:WorkflowViewState.IdRef="InputDialog_46" IsPassword="False" Label="select your destination station : " Options="[toStationListFiltered.ToArray]" Title="STATIONS">
-                                      <ui:InputDialog.Result>
-                                        <OutArgument x:TypeArguments="x:String">[toStation]</OutArgument>
-                                      </ui:InputDialog.Result>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:InputDialog>
-                                  </TryCatch.Try>
-                                  <TryCatch.Catches>
-                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_17">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ActivityAction x:TypeArguments="s:Exception">
-                                        <ActivityAction.Argument>
-                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                        </ActivityAction.Argument>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="416,667" sap2010:WorkflowViewState.IdRef="Sequence_118">
+                                  <Assign DisplayName="Assign remaining amount" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_28">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[CurrentCreditedAmount]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[CurrentCreditedAmount-fare]</InArgument>
+                                    </Assign.Value>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Assign>
+                                  <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText=" Add Data Row to booked tickets" ArrayRow="[New Object() {fromStation, toStation, fare}]" DataTable="[dt_bookedTickets]" DisplayName=" Add Data Row " sap:VirtualizedContainerService.HintSize="434,99" sap2010:WorkflowViewState.IdRef="AddDataRow_4">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:AddDataRow>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Ticket booked successfully and the remaining balance is Rs.&quot;&amp;CurrentCreditedAmount]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:LogMessage>
+                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="MessageBox_25" Text="[&quot;Ticket booked successfully and the remaining balance is Rs.&quot;&amp;CurrentCreditedAmount]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:MessageBox>
+                                </Sequence>
+                                <FlowStep.Next>
+                                  <FlowStep x:Name="__ReferenceID12">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">345,865</av:Point>
+                                        <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">400,935 400,1010</av:PointCollection>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="ask the user if he want's to book another ticker or not and if user did'nt choose any option then throw message asking to put any value before proceding&#xA;" Condition="[isNothing(creditSelected) OrElse String.IsNullOrEmpty(creditSelected.Trim)]" DisplayName="Booking action input box" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_11">
+                                      <ui:InterruptibleDoWhile.Body>
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,802" sap2010:WorkflowViewState.IdRef="Sequence_140">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_34" Text="[&quot;Please select any station&quot;]" />
-                                          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="382,490" sap2010:WorkflowViewState.IdRef="RetryScope_18">
-                                            <ui:RetryScope.ActivityBody>
-                                              <ActivityAction>
-                                                <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog for choosing to stations" sap:VirtualizedContainerService.HintSize="334,292" sap2010:WorkflowViewState.IdRef="InputDialog_48" IsPassword="False" Label="select your destination station : " Options="[toStationListFiltered.ToArray]" Title="STATIONS">
-                                                  <ui:InputDialog.Result>
-                                                    <OutArgument x:TypeArguments="x:String">[toStation]</OutArgument>
-                                                  </ui:InputDialog.Result>
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                </ui:InputDialog>
-                                              </ActivityAction>
-                                            </ui:RetryScope.ActivityBody>
-                                            <ui:RetryScope.Condition>
-                                              <ActivityFunc x:TypeArguments="x:Boolean" />
-                                            </ui:RetryScope.Condition>
-                                          </ui:RetryScope>
+                                          <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="450,324" sap2010:WorkflowViewState.IdRef="InputDialog_52" IsPassword="False" Label="Would you like to book another ticket or exit?" OptionsString="Book Another Ticket;Exit" Title="Booking Action">
+                                            <ui:InputDialog.Result>
+                                              <OutArgument x:TypeArguments="x:String">[UserChoice]</OutArgument>
+                                            </ui:InputDialog.Result>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:InputDialog>
+                                          <If Condition="[UserChoice=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="450,418" sap2010:WorkflowViewState.IdRef="If_24">
+                                            <If.Then>
+                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_141">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_39" Text="[&quot;Please select an optoin before proceding&quot;]" />
+                                              </Sequence>
+                                            </If.Then>
+                                            <If.Else>
+                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_142">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Sequence>
+                                            </If.Else>
+                                          </If>
                                         </Sequence>
-                                      </ActivityAction>
-                                    </Catch>
-                                  </TryCatch.Catches>
-                                </TryCatch>
-                                <ui:FilterDataTable sap2010:Annotation.AnnotationText="filtering out the datatable for  &#xA;fair" DataTable="[dt_metroDetails]" DisplayName="Filter Data Table " FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="438,235" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dt_filtered]" SelectColumnsMode="Remove">
-                                  <ui:FilterDataTable.Filters>
-                                    <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                                      <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-                                        <ui:FilterOperationArgument.Column>
-                                          <InArgument x:TypeArguments="x:String">["Source Station"]</InArgument>
-                                        </ui:FilterOperationArgument.Column>
-                                        <ui:FilterOperationArgument.Operand>
-                                          <InArgument x:TypeArguments="x:String">[fromStation]</InArgument>
-                                        </ui:FilterOperationArgument.Operand>
-                                      </ui:FilterOperationArgument>
-                                      <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-                                        <ui:FilterOperationArgument.Column>
-                                          <InArgument x:TypeArguments="x:String">["Target Station"]</InArgument>
-                                        </ui:FilterOperationArgument.Column>
-                                        <ui:FilterOperationArgument.Operand>
-                                          <InArgument x:TypeArguments="x:String">[toStation]</InArgument>
-                                        </ui:FilterOperationArgument.Operand>
-                                      </ui:FilterOperationArgument>
-                                    </scg:List>
-                                  </ui:FilterDataTable.Filters>
-                                  <ui:FilterDataTable.SelectColumns>
-                                    <scg:List x:TypeArguments="InArgument" Capacity="4">
-                                      <x:Null />
-                                    </scg:List>
-                                  </ui:FilterDataTable.SelectColumns>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:FilterDataTable>
-                                <Assign sap2010:Annotation.AnnotationText="Filtering fare form filtered datatable " sap:VirtualizedContainerService.HintSize="438,136" sap2010:WorkflowViewState.IdRef="Assign_45">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Int32">[fare]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(dt_filtered.Rows(0)("Fare").ToString)]</InArgument>
-                                  </Assign.Value>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </Assign>
-                              </Sequence>
-                            </Sequence>
-                            <FlowStep.Next>
-                              <FlowDecision x:Name="__ReferenceID3" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-                                <FlowDecision.Condition>
-                                  <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="CurrentCreditedAmount&gt;=fare" />
-                                </FlowDecision.Condition>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <av:Point x:Key="ShapeLocation">550,770</av:Point>
-                                    <av:Size x:Key="ShapeSize">60,60</av:Size>
-                                    <av:PointCollection x:Key="TrueConnector">550,800 455,800</av:PointCollection>
-                                    <av:PointCollection x:Key="FalseConnector">610,800 690,800 690,865</av:PointCollection>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <FlowDecision.True>
-                                  <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_5">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <av:Point x:Key="ShapeLocation">345,765</av:Point>
-                                        <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                        <av:PointCollection x:Key="ConnectorLocation">400,835 400,1035</av:PointCollection>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence sap2010:Annotation.AnnotationText="sequene will run when the condtion get passes then shows the user success message" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                                      </ui:InterruptibleDoWhile.Body>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign DisplayName="Assign remaining amount" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_28">
-                                        <Assign.To>
-                                          <OutArgument x:TypeArguments="x:Int32">[CurrentCreditedAmount]</OutArgument>
-                                        </Assign.To>
-                                        <Assign.Value>
-                                          <InArgument x:TypeArguments="x:Int32">[CurrentCreditedAmount-fare]</InArgument>
-                                        </Assign.Value>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </Assign>
-                                      <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText=" Add Data Row to booked tickets" ArrayRow="[New Object() {fromStation, toStation, fare}]" DataTable="[dt_bookedTickets]" DisplayName=" Add Data Row " sap:VirtualizedContainerService.HintSize="434,99" sap2010:WorkflowViewState.IdRef="AddDataRow_4">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </ui:AddDataRow>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Ticket booked successfully and the remaining balance is Rs.&quot;&amp;CurrentCreditedAmount]">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </ui:LogMessage>
-                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="MessageBox_25" Text="[&quot;Ticket booked successfully and the remaining balance is Rs.&quot;&amp;CurrentCreditedAmount]">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </ui:MessageBox>
-                                    </Sequence>
+                                    </ui:InterruptibleDoWhile>
                                     <FlowStep.Next>
-                                      <FlowStep x:Name="__ReferenceID8" sap2010:WorkflowViewState.IdRef="FlowStep_14">
+                                      <FlowDecision x:Name="__ReferenceID7" Condition="[UserChoice=&quot;Exit&quot;]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">345,1035</av:Point>
-                                            <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">400,1105 400,1160</av:PointCollection>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <av:Point x:Key="ShapeLocation">370,1010</av:Point>
+                                            <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                            <av:PointCollection x:Key="TrueConnector">400,1070 400,1145</av:PointCollection>
+                                            <av:PointCollection x:Key="FalseConnector">370,1040 340,1040 340,340 535,340</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InputDialog_44" IsPassword="False" Label="Would you like to book another ticket or exit?" OptionsString="Book Another Ticket;Exit" Title="Booking Action">
-                                          <ui:InputDialog.Result>
-                                            <OutArgument x:TypeArguments="x:String">[UserChoice]</OutArgument>
-                                          </ui:InputDialog.Result>
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                        </ui:InputDialog>
-                                        <FlowStep.Next>
-                                          <FlowDecision x:Name="__ReferenceID9" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
-                                            <FlowDecision.Condition>
-                                              <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="UserChoice=&quot;Exit&quot;" />
-                                            </FlowDecision.Condition>
+                                        <FlowDecision.True>
+                                          <FlowStep x:Name="__ReferenceID8" sap2010:WorkflowViewState.IdRef="FlowStep_10">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <av:Point x:Key="ShapeLocation">370,1160</av:Point>
-                                                <av:Size x:Key="ShapeSize">60,60</av:Size>
-                                                <av:PointCollection x:Key="TrueConnector">430,1190 485,1190</av:PointCollection>
-                                                <av:PointCollection x:Key="FalseConnector">370,1190 340,1190 340,410 525,410</av:PointCollection>
+                                                <av:Point x:Key="ShapeLocation">345,1145</av:Point>
+                                                <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                                <av:PointCollection x:Key="ConnectorLocation">400,1215 400,1245 590,1245 590,1305</av:PointCollection>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <FlowDecision.True>
-                                              <FlowStep x:Name="__ReferenceID10" sap2010:WorkflowViewState.IdRef="FlowStep_10">
+                                            <Sequence sap2010:Annotation.AnnotationText="assigning process flag to True so that i.e EXIT the process&#xD;&#xA;" DisplayName="Exit Process" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_111">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_40">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Boolean">[ProcessFlag]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                </Assign.Value>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <av:Point x:Key="ShapeLocation">485,1155</av:Point>
-                                                    <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                                    <av:PointCollection x:Key="ConnectorLocation">540,1225 540,1395</av:PointCollection>
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <Sequence sap2010:Annotation.AnnotationText="making process true for further flowchart" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_111">
+                                              </Assign>
+                                            </Sequence>
+                                            <FlowStep.Next>
+                                              <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_15">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <av:Point x:Key="ShapeLocation">535,1305</av:Point>
+                                                    <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Sequence sap2010:Annotation.AnnotationText="final sequence for outputing the journey details ans remaining balance" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_112">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_40">
-                                                    <Assign.To>
-                                                      <OutArgument x:TypeArguments="x:Boolean">[ProcessFlag]</OutArgument>
-                                                    </Assign.To>
-                                                    <Assign.Value>
-                                                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                                    </Assign.Value>
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                  </Assign>
-                                                </Sequence>
-                                                <FlowStep.Next>
-                                                  <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_15">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <av:Point x:Key="ShapeLocation">485,1395</av:Point>
-                                                        <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <Sequence sap2010:Annotation.AnnotationText="final sequence for outputing the journey details ans remaining balance" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_112">
-                                                      <sap:WorkflowViewStateService.ViewState>
-                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-                                                        </scg:Dictionary>
-                                                      </sap:WorkflowViewStateService.ViewState>
-                                                      <If Condition="[dt_bookedTickets Is Nothing OrElse dt_bookedTickets.Rows.Count = 0]" sap:VirtualizedContainerService.HintSize="450,618" sap2010:WorkflowViewState.IdRef="If_20">
-                                                        <If.Then>
-                                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_126">
-                                                            <sap:WorkflowViewStateService.ViewState>
-                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                              </scg:Dictionary>
-                                                            </sap:WorkflowViewStateService.ViewState>
-                                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_35" Text="[&quot;Empty&quot;]" />
-                                                          </Sequence>
-                                                        </If.Then>
-                                                        <If.Else>
-                                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,280" sap2010:WorkflowViewState.IdRef="Sequence_127">
-                                                            <sap:WorkflowViewStateService.ViewState>
-                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                              </scg:Dictionary>
-                                                            </sap:WorkflowViewStateService.ViewState>
-                                                            <ui:OutputDataTable sap2010:Annotation.AnnotationText="" DataTable="[dt_bookedTickets]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="382,112" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[outputText]">
-                                                              <sap:WorkflowViewStateService.ViewState>
-                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-                                                                </scg:Dictionary>
-                                                              </sap:WorkflowViewStateService.ViewState>
-                                                            </ui:OutputDataTable>
-                                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Booked Tickets&#xA;" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_32" Text="[&quot;Booked Tickets: &quot;&amp; vbCrLf &amp; outputText]">
-                                                              <sap:WorkflowViewStateService.ViewState>
-                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                </scg:Dictionary>
-                                                              </sap:WorkflowViewStateService.ViewState>
-                                                            </ui:MessageBox>
-                                                          </Sequence>
-                                                        </If.Else>
-                                                      </If>
-                                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Remaining Balance:" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="MessageBox_31" Text="[&quot;Remaining Balance: Rs.&quot;&amp; CurrentCreditedAmount]">
+                                                  <If Condition="[dt_bookedTickets Is Nothing OrElse dt_bookedTickets.Rows.Count = 0]" sap:VirtualizedContainerService.HintSize="450,618" sap2010:WorkflowViewState.IdRef="If_20">
+                                                    <If.Then>
+                                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_126">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                      </ui:MessageBox>
-                                                    </Sequence>
-                                                  </FlowStep>
-                                                </FlowStep.Next>
-                                              </FlowStep>
-                                            </FlowDecision.True>
-                                            <FlowDecision.False>
-                                              <x:Reference>__ReferenceID0</x:Reference>
-                                            </FlowDecision.False>
-                                          </FlowDecision>
-                                        </FlowStep.Next>
-                                      </FlowStep>
-                                    </FlowStep.Next>
-                                  </FlowStep>
-                                </FlowDecision.True>
-                                <FlowDecision.False>
-                                  <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_6">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <av:Point x:Key="ShapeLocation">635,865</av:Point>
-                                        <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                        <av:PointCollection x:Key="ConnectorLocation">690,935 690,985</av:PointCollection>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence sap2010:Annotation.AnnotationText="informs the user when the condition gets false or have insufficient balance" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_96">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:LogMessage DisplayName="Log Balance message" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Insufficient Balance. current amount Rs.&quot;&amp;CurrentCreditedAmount]">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </ui:LogMessage>
-                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="MessageBox_27" Text="[&quot;Insufficient Balance. current amount Rs.&quot;&amp;CurrentCreditedAmount]">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </ui:MessageBox>
-                                    </Sequence>
-                                    <FlowStep.Next>
-                                      <FlowStep x:Name="__ReferenceID6" sap2010:WorkflowViewState.IdRef="FlowStep_7">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">635,985</av:Point>
-                                            <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">690,1055 690,1170</av:PointCollection>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InputDialog_43" IsPassword="False" Label="Would you like to Recharge or Exit?" OptionsString="Recharge;Exit" Title="Choose Recharge or Exit">
-                                          <ui:InputDialog.Result>
-                                            <OutArgument x:TypeArguments="x:String">[rechargeChoice]</OutArgument>
-                                          </ui:InputDialog.Result>
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                        </ui:InputDialog>
-                                        <FlowStep.Next>
-                                          <FlowDecision x:Name="__ReferenceID7" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-                                            <FlowDecision.Condition>
-                                              <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="rechargeChoice = &quot;Exit&quot;" />
-                                            </FlowDecision.Condition>
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <av:Point x:Key="ShapeLocation">660,1170</av:Point>
-                                                <av:Size x:Key="ShapeSize">60,60</av:Size>
-                                                <av:PointCollection x:Key="TrueConnector">690,1230 690,1260 720,1260 720,1305</av:PointCollection>
-                                                <av:PointCollection x:Key="FalseConnector">720,1200 750,1200 750,410 635,410</av:PointCollection>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                            <FlowDecision.True>
-                                              <FlowStep x:Name="__ReferenceID12" sap2010:WorkflowViewState.IdRef="FlowStep_12">
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <av:Point x:Key="ShapeLocation">665,1305</av:Point>
-                                                    <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                                    <av:PointCollection x:Key="ConnectorLocation">665,1340 540,1340 540,1395</av:PointCollection>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                                <Sequence sap2010:Annotation.AnnotationText="assigning process true for further workflow " sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_122">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_47">
-                                                    <Assign.To>
-                                                      <OutArgument x:TypeArguments="x:Boolean">[ProcessFlag]</OutArgument>
-                                                    </Assign.To>
-                                                    <Assign.Value>
-                                                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                                    </Assign.Value>
+                                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_35" Text="[&quot;Empty&quot;]" />
+                                                      </Sequence>
+                                                    </If.Then>
+                                                    <If.Else>
+                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,280" sap2010:WorkflowViewState.IdRef="Sequence_127">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:OutputDataTable sap2010:Annotation.AnnotationText="" DataTable="[dt_bookedTickets]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="382,112" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[outputText]">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </ui:OutputDataTable>
+                                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Booked Tickets&#xA;" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_32" Text="[&quot;Booked Tickets: &quot;&amp; vbCrLf &amp; outputText]">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </ui:MessageBox>
+                                                      </Sequence>
+                                                    </If.Else>
+                                                  </If>
+                                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Remaining Balance:" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="MessageBox_31" Text="[&quot;Remaining Balance: Rs.&quot;&amp; CurrentCreditedAmount]">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                  </Assign>
+                                                  </ui:MessageBox>
                                                 </Sequence>
-                                                <FlowStep.Next>
-                                                  <x:Reference>__ReferenceID1</x:Reference>
-                                                </FlowStep.Next>
                                               </FlowStep>
-                                            </FlowDecision.True>
-                                            <FlowDecision.False>
-                                              <x:Reference>__ReferenceID0</x:Reference>
-                                            </FlowDecision.False>
-                                          </FlowDecision>
-                                        </FlowStep.Next>
-                                      </FlowStep>
+                                            </FlowStep.Next>
+                                          </FlowStep>
+                                        </FlowDecision.True>
+                                        <FlowDecision.False>
+                                          <x:Reference>__ReferenceID0</x:Reference>
+                                        </FlowDecision.False>
+                                      </FlowDecision>
                                     </FlowStep.Next>
                                   </FlowStep>
-                                </FlowDecision.False>
-                              </FlowDecision>
-                            </FlowStep.Next>
-                          </FlowStep>
-                        </FlowDecision.True>
-                      </FlowDecision>
-                    </FlowStep.Next>
-                  </FlowStep>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowDecision.True>
+                            <FlowDecision.False>
+                              <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">705,715</av:Point>
+                                    <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">760,785 760,865</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence sap2010:Annotation.AnnotationText="informs the user when the condition gets false or have insufficient balance" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_96">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Balance message" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Insufficient Balance. current amount Rs.&quot;&amp;CurrentCreditedAmount]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:LogMessage>
+                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="MessageBox_27" Text="[&quot;Insufficient Balance. current amount Rs.&quot;&amp;CurrentCreditedAmount]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:MessageBox>
+                                </Sequence>
+                                <FlowStep.Next>
+                                  <FlowStep x:Name="__ReferenceID13">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">705,865</av:Point>
+                                        <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">760,935 760,1010</av:PointCollection>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[isNothing(rechargeChoice) OrElse String.IsNullOrEmpty(rechargeChoice.Trim)]" DisplayName="Recharge action input box" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_12">
+                                      <ui:InterruptibleDoWhile.Body>
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,738" sap2010:WorkflowViewState.IdRef="Sequence_143">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:InputDialog Options="{x:Null}" DisplayName="Recharge action input box" sap:VirtualizedContainerService.HintSize="450,324" sap2010:WorkflowViewState.IdRef="InputDialog_53" IsPassword="False" Label="Would you like to Recharge or Exit?" OptionsString="Recharge;Exit" Title="Choose Recharge or Exit">
+                                            <ui:InputDialog.Result>
+                                              <OutArgument x:TypeArguments="x:String">[rechargeChoice]</OutArgument>
+                                            </ui:InputDialog.Result>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:InputDialog>
+                                          <If Condition="[rechargeChoice=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="450,354" sap2010:WorkflowViewState.IdRef="If_25">
+                                            <If.Then>
+                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_144">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_40" Text="[&quot;Please select an opton before proceding&quot;]" />
+                                              </Sequence>
+                                            </If.Then>
+                                            <If.Else>
+                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_145">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Sequence>
+                                            </If.Else>
+                                          </If>
+                                        </Sequence>
+                                      </ui:InterruptibleDoWhile.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:InterruptibleDoWhile>
+                                    <FlowStep.Next>
+                                      <FlowDecision x:Name="__ReferenceID6" Condition="[rechargeChoice = &quot;Exit&quot;]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <av:Point x:Key="ShapeLocation">730,1010</av:Point>
+                                            <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                            <av:PointCollection x:Key="TrueConnector">760,1070 760,1145</av:PointCollection>
+                                            <av:PointCollection x:Key="FalseConnector">790,1040 820,1040 820,340 645,340</av:PointCollection>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <FlowDecision.True>
+                                          <FlowStep x:Name="__ReferenceID10" sap2010:WorkflowViewState.IdRef="FlowStep_12">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <av:Point x:Key="ShapeLocation">705,1145</av:Point>
+                                                <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                                <av:PointCollection x:Key="ConnectorLocation">705,1180 590,1180 590,1305</av:PointCollection>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Sequence sap2010:Annotation.AnnotationText="assigning process flag to True so that i.e EXIT the process&#xD;&#xA;" DisplayName="Exit process" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_122">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_47">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Boolean">[ProcessFlag]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                </Assign.Value>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Assign>
+                                            </Sequence>
+                                            <FlowStep.Next>
+                                              <x:Reference>__ReferenceID1</x:Reference>
+                                            </FlowStep.Next>
+                                          </FlowStep>
+                                        </FlowDecision.True>
+                                        <FlowDecision.False>
+                                          <x:Reference>__ReferenceID0</x:Reference>
+                                        </FlowDecision.False>
+                                      </FlowDecision>
+                                    </FlowStep.Next>
+                                  </FlowStep>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowDecision.False>
+                          </FlowDecision>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowDecision.True>
+                  </FlowDecision>
                 </FlowStep.Next>
               </FlowStep>
             </FlowStep.Next>
@@ -936,7 +1077,6 @@
         </FlowStep.Next>
       </FlowStep>
       <x:Reference>__ReferenceID2</x:Reference>
-      <x:Reference>__ReferenceID0</x:Reference>
       <FlowStep sap2010:WorkflowViewState.IdRef="FlowStep_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1275,13 +1415,13 @@
       <x:Reference>__ReferenceID6</x:Reference>
       <x:Reference>__ReferenceID7</x:Reference>
       <x:Reference>__ReferenceID8</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
       <x:Reference>__ReferenceID9</x:Reference>
       <x:Reference>__ReferenceID10</x:Reference>
-      <x:Reference>__ReferenceID1</x:Reference>
       <x:Reference>__ReferenceID11</x:Reference>
+      <x:Reference>__ReferenceID0</x:Reference>
       <x:Reference>__ReferenceID12</x:Reference>
       <x:Reference>__ReferenceID13</x:Reference>
-      <x:Reference>__ReferenceID14</x:Reference>
     </Flowchart>
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="600,210" sap2010:WorkflowViewState.IdRef="CommentOut_15">
       <ui:CommentOut.Body>
